@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of M Siva Nandini, B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at Jain (Deemed-to-be University).">
+  <meta name="theme-color" content="#0b1020">
+  <title>M Siva Nandini | CSE (AI & ML)</title>
+  <style>
+    :root {
+      --bg: #080b14; --panel: #101729; --panel2: #141d33;
+      --text: #f4f6ff; --muted: #aab4ca; --accent: #9a8cff;
+      --accent2: #65dfc2; --line: rgba(255,255,255,.11);
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text); background:
+      radial-gradient(ellipse at 12% 0%, rgba(110,91,255,.16), transparent 35%),
+      radial-gradient(ellipse at 95% 18%, rgba(49,204,177,.09), transparent 28%), var(--bg);
+      font: 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent2); outline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 5; backdrop-filter: blur(18px); background: rgba(8,11,20,.82); border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 23px; color: var(--muted); font-size: .9rem; }
+    .navlinks a:hover { color: var(--text); }
+    .hero { padding: 100px 0 82px; display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 55px; }
+    .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; font-size: .76rem; }
+    h1 { font-size: clamp(2.8rem, 7vw, 5.3rem); line-height: 1.02; letter-spacing: -.065em; margin: 16px 0 18px; }
+    h1 span { color: var(--accent); }
+    .lead { max-width: 650px; color: var(--muted); font-size: 1.1rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border: 1px solid var(--line); border-radius: 12px; font-weight: 700; transition: .2s; }
+    .btn.primary { background: var(--accent); color: #100d24; border-color: var(--accent); }
+    .btn:hover { transform: translateY(-2px); }
+    .hero-card { padding: 26px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, rgba(154,140,255,.14), rgba(16,23,41,.92)); box-shadow: 0 25px 80px rgba(0,0,0,.25); }
+    .orb { width: 76px; height: 76px; border-radius: 22px; display: grid; place-items: center; font-size: 1.8rem; font-weight: 800; color: #100d24; background: linear-gradient(135deg,var(--accent),var(--accent2)); margin-bottom: 22px; }
+    .hero-card h2 { margin: 0 0 7px; font-size: 1.25rem; }
+    .hero-card p { margin: 0; color: var(--muted); }
+    .quickfacts { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 24px; }
+    .fact { padding: 13px; border-radius: 13px; background: rgba(255,255,255,.045); }
+    .fact strong { display: block; font-size: 1.25rem; color: var(--accent2); }
+    .fact small { color: var(--muted); }
+    section { padding: 60px 0; }
+    .section-head { margin-bottom: 26px; }
+    .section-head h2 { margin: 5px 0; font-size: clamp(1.8rem,4vw,2.5rem); letter-spacing: -.045em; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .about-grid, .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { background: rgba(16,23,41,.82); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+    .card p { color: var(--muted); margin: 8px 0 0; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { padding: 8px 13px; border-radius: 999px; background: rgba(154,140,255,.12); border: 1px solid rgba(154,140,255,.25); color: #ddd8ff; font-size: .9rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .project-card { display: flex; flex-direction: column; min-height: 240px; }
+    .project-card .type { color: var(--accent2); text-transform: uppercase; font-size: .72rem; font-weight: 800; letter-spacing: .1em; }
+    .project-card h3 { margin: 10px 0 4px; }
+    .project-card p { color: var(--muted); font-size: .94rem; flex: 1; }
+    .note { font-size: .82rem; color: var(--muted); border-left: 2px solid var(--accent2); padding-left: 12px; margin-top: 20px; }
+    .timeline { display: grid; gap: 14px; }
+    .timeline-item { display: grid; grid-template-columns: 150px 1fr; gap: 20px; }
+    .timeline-item .when { color: var(--accent2); font-weight: 700; }
+    .timeline-item h3 { margin: 0; }
+    .timeline-item p { margin: 4px 0 0; color: var(--muted); }
+    .contact { text-align: center; padding: 42px; background: linear-gradient(135deg, rgba(154,140,255,.16), rgba(101,223,194,.08)); }
+    .contact p { color: var(--muted); }
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: .88rem; text-align: center; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 72px 0 50px; gap: 28px; }
+      .navlinks { gap: 12px; font-size: .78rem; }
+      .about-grid, .two-col, .project-grid { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 3px; }
+      section { padding: 44px 0; }
+      .contact { padding: 28px 18px; }
+    }
+    @media (max-width: 430px) { .wrap { width: min(100% - 28px, var(--max)); } nav { align-items: flex-start; padding: 15px 0; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">Siva Nandini<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+        <a href="#education">Education</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">B.Tech · Computer Science & Engineering</div>
+        <h1>Hi, I'm<br><span>M Siva Nandini.</span></h1>
+        <p class="lead">An AI &amp; Machine Learning student at Jain (Deemed-to-be University), interested in building useful technology, strengthening my programming foundations and exploring intelligent solutions to real-world problems.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work ↗</a>
+          <a class="btn" href="mailto:machinasivanandini@gmail.com">Connect on Email ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="orb">SN</div>
+        <h2>Learning. Building. Growing.</h2>
+        <p>Focused on computer science, AI &amp; ML, and continuous learning.</p>
+        <div class="quickfacts">
+          <div class="fact"><strong>8.5</strong><small>CGPA · 10-point scale</small></div>
+          <div class="fact"><strong>96.1%</strong><small>Class XII</small></div>
+          <div class="fact"><strong>91.17%</strong><small>Class X</small></div>
+          <div class="fact"><strong>AI &amp; ML</strong><small>Specialization</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">A little about me</div><h2>Curious about technology. Focused on progress.</h2></div>
+        <div class="about-grid">
+          <div class="card">
+            <h3>Who I am</h3>
+            <p>I am pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning at Jain (Deemed-to-be University). I enjoy learning programming, understanding how technology works and applying concepts through academic projects.</p>
+          </div>
+          <div class="card">
+            <h3>What I'm exploring</h3>
+            <p>My interests include artificial intelligence, machine learning and problem-solving. I value teamwork, clear communication and opportunities to learn by doing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">My toolkit</div><h2>Technical skills & interests</h2><p>Skills and areas I am currently learning and developing.</p></div>
+        <div class="card">
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
+            <span class="tag">Artificial Intelligence</span><span class="tag">Machine Learning</span>
+            <span class="tag">Problem Solving</span><span class="tag">Data Structures & Algorithms</span>
+          </div>
+          <p class="note">Add tools, frameworks and proficiency levels only when you have hands-on experience with them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Selected academic work</div><h2>Projects & practical learning</h2><p>A snapshot of coursework and project work. Add repository links when the projects are uploaded.</p></div>
+        <div class="project-grid">
+          <article class="card project-card">
+            <div class="type">Design thinking · Academic project</div>
+            <h3>Table-Transformer</h3>
+            <p>Worked on a design-thinking project exploring a proposed Table-Transformer solution, including user-focused problem framing and positive and negative prompt analysis.</p>
+          </article>
+          <article class="card project-card">
+            <div class="type">Operating systems · Lab work</div>
+            <h3>OS Concepts in Python</h3>
+            <p>Practised operating-system concepts through Python lab implementations, including shared memory and FIFO page replacement.</p>
+          </article>
+          <article class="card project-card">
+            <div class="type">Discrete mathematics · Academic work</div>
+            <h3>Graph Theory Learning Project</h3>
+            <p>Explored graph theory concepts, their mathematical foundations and practical applications as part of a learning and presentation project.</p>
+          </article>
+        </div>
+        <p class="note">These cards describe academic work discussed for this portfolio. Replace or expand them with your final project details and working GitHub repository links before presenting them as completed projects.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Academic journey</div><h2>Education & certification</h2></div>
+        <div class="card timeline">
+          <div class="timeline-item"><div class="when">B.Tech</div><div><h3>Jain (Deemed-to-be University)</h3><p>Computer Science and Engineering – Artificial Intelligence &amp; Machine Learning · CGPA: 8.5/10</p></div></div>
+          <div class="timeline-item"><div class="when">Class XII</div><div><h3>Narayana Jr College – Saraswathi Nilayam</h3><p>96.1%</p></div></div>
+          <div class="timeline-item"><div class="when">Class X</div><div><h3>Machina Siva Nandini</h3><p>91.17%</p></div></div>
+          <div class="timeline-item"><div class="when">Certification</div><div><h3>Introduction to Discrete Mathematics</h3><p>Wolfram U</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Beyond the classroom</div><h2>Leadership & involvement</h2></div>
+        <div class="card">
+          <h3>GRI Ideathon · Outreach Lead</h3>
+          <p>Contributed to outreach and promotion activities for the GRI Ideathon at the Centre for Grassroots Research and Innovation (GRI), Jain University.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="card contact">
+          <div class="eyebrow">Let's connect</div>
+          <h2>Open to learning and collaboration.</h2>
+          <p>Feel free to reach me by email or explore my code on GitHub.</p>
+          <div class="actions" style="justify-content:center">
+            <a class="btn primary" href="mailto:machinasivanandini@gmail.com">Email me ↗</a>
+            <a class="btn" href="https://github.com/Siva-Nandini-git" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© <span id="year"></span> M Siva Nandini · Built with HTML &amp; CSS</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
